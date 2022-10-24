@@ -1,2 +1,2 @@
 # Stopwatch
-Cronômetro para aprender Funções, Thread, Sleep.
+Stopwatch to learn C# Functions, Thread, Sleep.
