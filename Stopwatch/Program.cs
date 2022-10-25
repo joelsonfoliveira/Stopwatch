@@ -5,7 +5,7 @@ namespace Stopwatch
   {
     public static void Main(string[] args)
     {
-
+      Start();
     }
 
     static void Start()
@@ -14,7 +14,10 @@ namespace Stopwatch
       int currentTime = 0;
       while (currentTime != time)
       {
+        Console.Clear();
         currentTime++;
+        System.Console.WriteLine(currentTime);
+        Thread.Sleep(1000);
       }
     }
   }
