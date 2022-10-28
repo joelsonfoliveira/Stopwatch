@@ -5,7 +5,6 @@ namespace Stopwatch
   {
     public static void Main(string[] args)
     {
-      // Start(6);
       Menu();
     }
 
@@ -19,8 +18,10 @@ namespace Stopwatch
 
       string data = System.Console.ReadLine().ToLower();
       char type = char.Parse(data.Substring(data.Length - 1, 1));
-      System.Console.WriteLine(data);
+      int time = int.Parse(data.Substring(0, data.Length - 1));
+
       System.Console.WriteLine(type);
+      System.Console.WriteLine(time);
     }
 
     static void Start(int time)
