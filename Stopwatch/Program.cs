@@ -24,13 +24,26 @@ namespace Stopwatch
       if (multiplier == 'm')
         multiplier = 60;
 
-      if (type == '0')
+      if (time == 0)
         System.Environment.Exit(0);
 
-      Start(time * multiplier);
+      PreStart(time * multiplier);
 
       System.Console.WriteLine(type);
       System.Console.WriteLine(time);
+    }
+
+    static void PreStart(int time)
+    {
+      Console.Clear();
+      System.Console.WriteLine("Ready...");
+      Thread.Sleep(1000);
+      System.Console.WriteLine("Set...");
+      Thread.Sleep(1000);
+      System.Console.WriteLine("Go...");
+      Thread.Sleep(2500);
+
+      Start(time);
     }
 
     static void Start(int time)
