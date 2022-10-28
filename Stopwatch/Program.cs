@@ -19,6 +19,15 @@ namespace Stopwatch
       string data = System.Console.ReadLine().ToLower();
       char type = char.Parse(data.Substring(data.Length - 1, 1));
       int time = int.Parse(data.Substring(0, data.Length - 1));
+      int multiplier = 1;
+
+      if (multiplier == 'm')
+        multiplier = 60;
+
+      if (type == '0')
+        System.Environment.Exit(0);
+
+      Start(time * multiplier);
 
       System.Console.WriteLine(type);
       System.Console.WriteLine(time);
@@ -38,6 +47,7 @@ namespace Stopwatch
       Console.Clear();
       System.Console.WriteLine("Stopwatch finalizado.. retornando para o menu!");
       Thread.Sleep(2500);
+      Menu();
     }
   }
 }
