@@ -18,7 +18,9 @@ namespace Stopwatch
       System.Console.WriteLine("Quanto tempo deseja contar?");
 
       string data = System.Console.ReadLine().ToLower();
+      char type = char.Parse(data.Substring(data.Length - 1, 1));
       System.Console.WriteLine(data);
+      System.Console.WriteLine(type);
     }
 
     static void Start(int time)
