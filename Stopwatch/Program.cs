@@ -13,7 +13,7 @@ namespace Stopwatch
       Console.Clear();
       System.Console.WriteLine("S - Segundo");
       System.Console.WriteLine("M - Minuto");
-      System.Console.WriteLine("0 -  Sair");
+      System.Console.WriteLine("0s -  Sair");
       System.Console.WriteLine("Quanto tempo deseja contar?");
 
       string data = System.Console.ReadLine().ToLower();
